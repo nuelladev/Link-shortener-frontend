@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tintly url shortener</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+    <div class="container">
+        <nav class="navigation">
+            <a href="index.html" class="logobox">
+                <img src="images\tintlies.png" class="logo" alt="logo">
+            </a>
+            <ul class="navlist">
+                <li class="navitem">
+                    <a href="about.html" class="navlink">About</a>
+                </li>
+                <li class="navitem">
+                    <a href="#" class="navlink">Sign up</a>
+                </li>
+                <li class="navitem">
+                    <a href="#" class="navlink">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="landingpage">
+    <div class="container">
+        <div class="content">
+            <div class="content-info">
+                <h1 class="text">
+                    More than just links...
+                </h1>
+                <p class="paragraph">Build your brand with our free custormized url shortener. Sign up to get started</p>
+            <div class="shorten" id="url-shortener">
+                <input type="text" class="shorten-bar"  novalidate onsubmit="shortenURL" placeholder="Enter the link here...">
+                <input type="button" class="search-btn" novalidate onsubmit="shortenURL" value="Shorten Link">
+            <h3 id="error"></h3>
+            </div>
+            <div id="result">
+                <span>
+                  <h2>Your URL: </h2>
+                  <a id="response-anchor" href="" target="_blank"><h3 id="response"></h3></a>
+                </span>
+                <button onclick="copyURL()">Copy</button>
+              </div>
+            <div class="sm-tags">
+                <a href="www.twitter.com" class="sm-link"><i class="fab fa-twitter"></i></a>
+                <a href="www.facebook.com" class="sm-link"><i class="fab fa-facebook"></i></a>
+                <a href="www.linkedin.com" class="sm-link"><i class="fab fa-linkedin"></i></a>
+                <a href="www.instagram.com" class="sm-link"><i class="fab fa-instagram"></i></a>  
+            </div>
+            </div>
+            <div class="image-groups">
+                <img src="images\link5.png" alt="" class="large">
+                <img src="images\link4.png" alt="" class="smalllarge">
+            </div>
+        </div>
+    </div>
+<script src="index.js"></script>
+</section>
+</body>
+</html>

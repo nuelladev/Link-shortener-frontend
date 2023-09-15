@@ -1,0 +1,268 @@
+/*Base*/
+.css-selector {
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size: 62%
+}
+body{
+    font-size: 1.6rem;
+    font-family: montserrat, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+header{
+    position:absolute;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navigation{
+    height: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.navlist{
+    display: flex;
+    list-style: none;
+}
+.navitem{
+    margin-right: 5rem;
+}
+.navitem:last-child{
+    margin-right: 0;
+}
+.navlink{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: opacity .3s;
+    color: #ffff;
+}
+.logo{
+    display: block;
+    width: 8rem;
+    height: 20px;
+}
+.navlink:hover{
+    opacity: 0.6;   
+}
+
+.landingpage{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, #071553, #3d446d, pink);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.landingpage::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 100vh;
+    background-image: url("./images/patly1.png");
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.content-info{
+    max-width: 80%;
+}
+.text{
+    font-size: 6rem;
+    color: #ffff;
+    margin-bottom: 1rem;
+}
+.paragraph{
+    color: #6f7eac;
+    margin-bottom: 2.5rem;
+}
+.shorten{
+    margin-bottom: 2.5rem;
+}
+.shorten input{
+    border: none;
+    border-radius: 5rem;
+    padding: 2rem;
+    outline: none;
+}
+.shorten-bar{
+    width: calc(100% - .5rem);
+}
+   
+.search-btn{
+    width: 10rem;
+    background-image: linear-gradient(to right, #ff83d5, #ffccb0);
+    color: #fff;
+    cursor: pointer;
+    margin-left: -10rem;
+}
+.search-btn:hover{
+    background-image: linear-gradient(to left, #ff83d5, #ffcc30);
+}
+#url-shortener h3 {
+    color: #cf3b3b;
+  }
+  h2{
+    font-size: small;
+    color: #6f7eac;
+    margin-left: 2.5rem;
+  }
+  
+  #result {
+    display: flex;
+    flex-direction: row;
+  
+    width: 33vw;
+  
+    align-items: center;
+    justify-content: center;
+  
+    gap: 20px;
+  }
+  
+  #result span {
+    display: flex;
+    flex-direction: row;
+  
+    width: fit-content;
+  
+    align-items: center;
+  }
+  
+  #result span a,
+  #result span a h3 {
+    color: #fff;
+  
+    transition: 0.15s ease;
+    transition-property: color;
+  }
+  
+  #result button {
+    padding: 8px 16px;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 4px;
+  
+    cursor: pointer;
+  
+    color:#6f7eac;
+    background-color: darkblue, #ff83d5, #ffcc30;
+  
+    transition: 0.15s ease;
+    transition-property: color;
+  }
+  
+  #result button:hover {
+    color: #fff;
+  }
+.sm-tags{
+    display: flex;
+}
+.sm-link{
+    color: #929fc5;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #929fc5;
+    border-radius: 58%;
+    display: flex;
+    justify-content: space-between;
+}
+.sm-link i{
+   margin: auto; 
+}
+.sm-link:hover{
+    background-image: linear-gradient(to right, #A917ff, #68f8ff);
+    color: #fff;
+}
+.image-groups{
+    text-align: center;
+    position: relative;
+}
+
+.large{
+    animation: move-up 2s infinite alternate;
+}
+.smalllarge{
+    animation: move-down 2s infinite alternate;
+}
+
+  
+@keyframes move-up{
+from {
+    transform: translateY(0);
+}
+to{
+    transform: translatey(2rem)
+}
+}
+
+@keyframes move-down{
+    from {
+        transform: translateY(0);
+    }
+    to{
+        transform: translatey(-2rem)
+    }
+    }
+@media screen and (max-width: 768px){
+    .navigation{
+        align-items: center;
+    }
+    .content{
+        grid-template-columns: 1fr;
+    }
+    .content-info{
+        order: 1; 
+        max-width: 100%;
+    }
+    
+}
